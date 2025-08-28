@@ -95,7 +95,7 @@ export function filterDrivers(rawDrivers) {
     .map(d => ({
       firstName: d.firstName ?? d.firstname ?? d.first_name ?? null,
       lastName:  d.lastName  ?? d.lastname  ?? d.last_name  ?? null,
-      _id:       d._id ?? null,
+      eldId:       d._id ?? null,
       active:    typeof d.active === "boolean" ? d.active : !!d.active,
       updatedAt: d.updatedAt,
     }));
@@ -104,7 +104,7 @@ export function filterDrivers(rawDrivers) {
 // Main function to fetch all companies' drivers
 export async function fetchAllCompaniesDrivers({
   companiesFile = "companies_filtered.json",
-  outFile = "companies_with_drivers.json",
+  outFile = "finalversion.json",
   sequential = true, // currently sequential, can add concurrency later
 } = {}) {
   const raw = await fs.readFile(companiesFile, "utf-8");
