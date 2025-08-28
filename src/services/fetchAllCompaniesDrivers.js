@@ -130,7 +130,7 @@ export async function fetchAllCompaniesDrivers({
       const driversRaw = await getDriversForCompany(token);
       const drivers = filterDrivers(driversRaw);
 
-      result.push({ companyId, name: companyName || null, drivers });
+      result.push({ eldPlatform: "HERO", companyId, name: companyName || null, drivers });
 
       // snapshot each company
       await fs.writeFile(outFile, JSON.stringify(result, null, 2));
