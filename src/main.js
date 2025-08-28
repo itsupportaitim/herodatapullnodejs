@@ -91,7 +91,7 @@ Time: ${alertData.timestamp}
 }
 
 // --- Filter Inactive Drivers ---
-async function filterInactiveDrivers(inputFile = "companies_with_drivers.json", outputFile = "companies_with_drivers_active.json") {
+async function filterInactiveDrivers(inputFile = "companies_with_drivers.json", outputFile = "finalversion.json") {
   const raw = await fs.readFile(inputFile, "utf-8");
   const companies = JSON.parse(raw);
 
@@ -106,7 +106,7 @@ async function filterInactiveDrivers(inputFile = "companies_with_drivers.json", 
 }
 
 // --- Main Endpoint ---
-app.get("/fetch-companies", async (req, res) => {
+app.get("/fetchcompanies", async (req, res) => {
   const startTime = Date.now();
 
   try {
