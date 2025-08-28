@@ -1025,6 +1025,13 @@
         "updatedAt": 1685661325282
       },
       {
+        "firstName": "Evans",
+        "lastName": "Hakim Devon",
+        "_id": "User:T8AgZXY4Ch",
+        "active": true,
+        "updatedAt": 1756397621855
+      },
+      {
         "firstName": "Dana Ronnie",
         "lastName": "Cooley",
         "_id": "User:T97eDR-G3R",
@@ -2308,7 +2315,7 @@
         "lastName": "Shirokikh",
         "_id": "User:_2R_ma8OH",
         "active": true,
-        "updatedAt": 1755812826261
+        "updatedAt": 1756390525604
       },
       {
         "firstName": "Murzabekov",
@@ -3018,7 +3025,7 @@
         "lastName": "Veesa",
         "_id": "User:ZjgAa5V0bU",
         "active": true,
-        "updatedAt": 1755403932265
+        "updatedAt": 1756395935513
       },
       {
         "firstName": "Nurzhigit",
@@ -3331,8 +3338,8 @@
         "firstName": "Syimyk",
         "lastName": "Dyikanov",
         "_id": "User:Ka7joNSit6",
-        "active": true,
-        "updatedAt": 1743637537396
+        "active": false,
+        "updatedAt": 1756395036784
       },
       {
         "firstName": "Andrey",
@@ -3548,15 +3555,15 @@
         "firstName": "Frank",
         "lastName": "Fabricio",
         "_id": "User:sBXIzb5AVW",
-        "active": false,
-        "updatedAt": 1756241885033
+        "active": true,
+        "updatedAt": 1756404990858
       },
       {
         "firstName": "Aman",
         "lastName": "Suranov",
         "_id": "User:uZSoNGHO3Z",
-        "active": true,
-        "updatedAt": 1749681675738
+        "active": false,
+        "updatedAt": 1756404493238
       },
       {
         "firstName": "Nuzupbek",
@@ -3660,7 +3667,7 @@
         "lastName": "Asanov",
         "_id": "User:QYv2ZRVDpV",
         "active": true,
-        "updatedAt": 1756382871162
+        "updatedAt": 1756394104843
       },
       {
         "firstName": "Igor ",
@@ -3705,6 +3712,13 @@
         "updatedAt": 1756158756273
       },
       {
+        "firstName": "Anthony Jafeth",
+        "lastName": "Mejia Cruz",
+        "_id": "User:frO96DrUXS",
+        "active": true,
+        "updatedAt": 1756403791088
+      },
+      {
         "firstName": "Murat",
         "lastName": "Sakhov",
         "_id": "User:hlumauDXR3",
@@ -3726,6 +3740,13 @@
         "updatedAt": 1755830958236
       },
       {
+        "firstName": "Aidarbek",
+        "lastName": "Bakirov",
+        "_id": "User:qy6SYoi2Cj",
+        "active": true,
+        "updatedAt": 1756404774886
+      },
+      {
         "firstName": "Guvanch",
         "lastName": "Koshayev",
         "_id": "User:uOtD3tyf9Y",
@@ -3738,6 +3759,13 @@
         "_id": "User:ub0O6Ic_Tt",
         "active": true,
         "updatedAt": 1756315785736
+      },
+      {
+        "firstName": "Amir",
+        "lastName": "Turgunov Bolotbekovich",
+        "_id": "User:wMKVIOGbrX",
+        "active": true,
+        "updatedAt": 1756391937829
       },
       {
         "firstName": "Eldiiar",
@@ -3888,7 +3916,7 @@
         "lastName": "Golban",
         "_id": "User:8LOEQvGG3",
         "active": true,
-        "updatedAt": 1756328853577
+        "updatedAt": 1756389730263
       },
       {
         "firstName": "Medvedev",
@@ -4472,8 +4500,8 @@
         "firstName": "Abdifatah Omar",
         "lastName": "Yusuf",
         "_id": "User:9Ub5UDQePA",
-        "active": true,
-        "updatedAt": 1756306233045
+        "active": false,
+        "updatedAt": 1756403847169
       },
       {
         "firstName": "Abdifatah",
@@ -5166,7 +5194,7 @@
         "lastName": "Iamandii",
         "_id": "User:Th1EEDnPgV",
         "active": true,
-        "updatedAt": 1753936109770
+        "updatedAt": 1756395946412
       },
       {
         "firstName": "AntoniOld",
@@ -6954,6 +6982,13 @@
         "updatedAt": 1725248046482
       },
       {
+        "firstName": "Josphat",
+        "lastName": "Wamunyu",
+        "_id": "User:yEIZkm3R63",
+        "active": true,
+        "updatedAt": 1756397890890
+      },
+      {
         "firstName": "Weissan",
         "lastName": "Komlan",
         "_id": "User:ygEQo8FPNl",
@@ -7507,7 +7542,7 @@
         "lastName": "Satkei Uulu",
         "_id": "User:4pkwLT57jj",
         "active": true,
-        "updatedAt": 1756381393531
+        "updatedAt": 1756403750226
       },
       {
         "firstName": "Akylbek",
@@ -9278,8 +9313,8 @@
         "firstName": "Galina",
         "lastName": "Karpets",
         "_id": "User:adRMSevsB1",
-        "active": true,
-        "updatedAt": 1756328812008
+        "active": false,
+        "updatedAt": 1756389546713
       },
       {
         "firstName": "Valentin",
@@ -10129,61 +10164,6 @@
     ]
   },
   {
-    "companyId": "Company:RSDqq6-XAJ",
-    "name": "Freight Stream Group LLC",
-    "drivers": [
-      {
-        "firstName": "Adan",
-        "lastName": "Mahmoud Idow",
-        "_id": "User:5SqjISKz5V",
-        "active": false,
-        "updatedAt": 1751028436896
-      },
-      {
-        "firstName": "Mohammed Abdullahi",
-        "lastName": "Raghe",
-        "_id": "User:7MLyUGUlnU",
-        "active": false,
-        "updatedAt": 1750954798068
-      },
-      {
-        "firstName": "Gurschi",
-        "lastName": "Tudor",
-        "_id": "User:KjTW6tTII",
-        "active": false,
-        "updatedAt": 1740553076116
-      },
-      {
-        "firstName": "Kairat",
-        "lastName": "Baialiev Bayalievich",
-        "_id": "User:Ozj4Qg0PoJ",
-        "active": false,
-        "updatedAt": 1735322688999
-      },
-      {
-        "firstName": "Alexandru",
-        "lastName": "Buruian",
-        "_id": "User:u9WjLAKj3",
-        "active": false,
-        "updatedAt": 1734002835842
-      },
-      {
-        "firstName": "Mars OLD",
-        "lastName": "Bakirov",
-        "_id": "User:vZF1Aw5i3",
-        "active": false,
-        "updatedAt": 1723356126472
-      },
-      {
-        "firstName": "Mars",
-        "lastName": "Bakirov",
-        "_id": "User:xnuOkQQ4w",
-        "active": false,
-        "updatedAt": 1727707754351
-      }
-    ]
-  },
-  {
     "companyId": "Company:Thq_DEVFCXv",
     "name": "KEMEL INCORPORATED",
     "drivers": [
@@ -10315,8 +10295,8 @@
         "firstName": "Amir",
         "lastName": "Turgunov Bolotbekovich",
         "_id": "User:1jVqqHav3U",
-        "active": true,
-        "updatedAt": 1756287243936
+        "active": false,
+        "updatedAt": 1756392336422
       },
       {
         "firstName": "Janiel",
@@ -10406,8 +10386,8 @@
         "firstName": "Yryskeldi",
         "lastName": "Karabaev",
         "_id": "User:7p7nWwMa5N",
-        "active": true,
-        "updatedAt": 1755149266924
+        "active": false,
+        "updatedAt": 1756390556813
       },
       {
         "firstName": "Shamil",
@@ -10630,8 +10610,8 @@
         "firstName": "Sergiy",
         "lastName": "Ocheretyannyy",
         "_id": "User:LrhpdWWySa",
-        "active": true,
-        "updatedAt": 1756300996125
+        "active": false,
+        "updatedAt": 1756390275465
       },
       {
         "firstName": "Miguel Angel",
@@ -10889,8 +10869,8 @@
         "firstName": "Sabit",
         "lastName": "Zhussip",
         "_id": "User:Yay2NFUp3B",
-        "active": true,
-        "updatedAt": 1756300989919
+        "active": false,
+        "updatedAt": 1756390033134
       },
       {
         "firstName": "Jose Daniel",
@@ -10903,8 +10883,8 @@
         "firstName": "Aidarbek",
         "lastName": "Bakirov",
         "_id": "User:ZyS3GQEaJT",
-        "active": true,
-        "updatedAt": 1749313618100
+        "active": false,
+        "updatedAt": 1756405487119
       },
       {
         "firstName": "Bilimbek",
@@ -11113,8 +11093,8 @@
         "firstName": "Dastan",
         "lastName": "Asanov",
         "_id": "User:nL454CVGoq",
-        "active": true,
-        "updatedAt": 1752198250040
+        "active": false,
+        "updatedAt": 1756391050617
       },
       {
         "firstName": "Abdyrasulov",
@@ -11576,8 +11556,15 @@
         "firstName": "BURGETBAATER",
         "lastName": "Ganbat",
         "_id": "User:3iAFEkqeI",
+        "active": false,
+        "updatedAt": 1756395522758
+      },
+      {
+        "firstName": "Burgetbaater",
+        "lastName": "Ganbat",
+        "_id": "User:3xcSfpAmbI",
         "active": true,
-        "updatedAt": 1756366209750
+        "updatedAt": 1756394635074
       },
       {
         "firstName": "Odpurev",
@@ -15703,7 +15690,7 @@
         "lastName": "Ergeshev",
         "_id": "User:BeztbgBZge",
         "active": true,
-        "updatedAt": 1755017752644
+        "updatedAt": 1756390260216
       },
       {
         "firstName": "Alisher",
@@ -28890,8 +28877,8 @@
         "firstName": "Yunesi",
         "lastName": "Fahez",
         "_id": "User:xjUuocuELW",
-        "active": true,
-        "updatedAt": 1745776472944
+        "active": false,
+        "updatedAt": 1756404743023
       },
       {
         "firstName": "Chyngyz OLDf",
@@ -29625,7 +29612,7 @@
         "lastName": "Itikulov",
         "_id": "User:Kmp6ePbjTg",
         "active": true,
-        "updatedAt": 1753203626556
+        "updatedAt": 1756393955078
       },
       {
         "firstName": "Ruslan",
@@ -29876,7 +29863,7 @@
         "lastName": "Muhammad Abubaker",
         "_id": "User:FMC3SeEmWm",
         "active": true,
-        "updatedAt": 1756222170290
+        "updatedAt": 1756405209345
       },
       {
         "firstName": "Renato",
@@ -30239,8 +30226,8 @@
         "firstName": "Sayed Wahidullah",
         "lastName": "Quraishi",
         "_id": "User:vqJ_O3Swp_",
-        "active": true,
-        "updatedAt": 1756222913710
+        "active": false,
+        "updatedAt": 1756397419704
       },
       {
         "firstName": "Asom",
@@ -30588,8 +30575,8 @@
         "firstName": "Volodymyr",
         "lastName": "Shevchuk",
         "_id": "User:T1jcpfCEVB",
-        "active": true,
-        "updatedAt": 1756299427913
+        "active": false,
+        "updatedAt": 1756404733469
       },
       {
         "firstName": "Antron",
@@ -30763,8 +30750,8 @@
         "firstName": "Nicholas",
         "lastName": "Thurman",
         "_id": "User:g2RNonNEh5",
-        "active": true,
-        "updatedAt": 1756299413720
+        "active": false,
+        "updatedAt": 1756404526684
       },
       {
         "firstName": "Henrikas",
@@ -34027,8 +34014,8 @@
         "firstName": "Ulugbek",
         "lastName": "Vakhid Uulu",
         "_id": "User:xTwGFx95EH",
-        "active": true,
-        "updatedAt": 1740493310036
+        "active": false,
+        "updatedAt": 1756398672422
       },
       {
         "firstName": "Mirlan",
@@ -34474,8 +34461,8 @@
         "firstName": "Aziz",
         "lastName": "Kazybekov",
         "_id": "User:3wxFaZJm9",
-        "active": true,
-        "updatedAt": 1756353360073
+        "active": false,
+        "updatedAt": 1756405473791
       },
       {
         "firstName": "Daniel",
@@ -41929,8 +41916,8 @@
         "firstName": "Vitalii",
         "lastName": "Vandzhura",
         "_id": "User:Luvk0u82Cp",
-        "active": true,
-        "updatedAt": 1756387610226
+        "active": false,
+        "updatedAt": 1756404303747
       },
       {
         "firstName": "Andrii",
@@ -44374,8 +44361,8 @@
         "firstName": "Andrea Terrell",
         "lastName": "White",
         "_id": "User:c0Ozd-dnCG",
-        "active": true,
-        "updatedAt": 1756383942088
+        "active": false,
+        "updatedAt": 1756390068029
       },
       {
         "firstName": "Goins",
@@ -44683,7 +44670,7 @@
         "lastName": "Catlett",
         "_id": "User:s_7C-zvTB",
         "active": true,
-        "updatedAt": 1751313502650
+        "updatedAt": 1756391088998
       },
       {
         "firstName": "Wynlan Christopher",

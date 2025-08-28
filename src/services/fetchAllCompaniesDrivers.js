@@ -1,4 +1,4 @@
-// fetch_all_companies_drivers.js
+// companiesDrivers.js
 import fs from "fs/promises";
 import dotenv from "dotenv";
 
@@ -11,15 +11,14 @@ const USERNAME = process.env.HEROELD_USERNAME;
 const PASSWORD = process.env.HEROELD_PASSWORD;
 
 if (!USERNAME || !PASSWORD) {
-  console.error("Missing HEROELD_USERNAME or HEROELD_PASSWORD in .env");
-  process.exit(1);
+  throw new Error("Missing HEROELD_USERNAME or HEROELD_PASSWORD in .env");
 }
 
-function basicAuthHeader(username, password) {
+export function basicAuthHeader(username, password) {
   return "Basic " + Buffer.from(`${username}:${password}`, "utf-8").toString("base64");
 }
 
-async function retry(fn, { attempts = 3, initialDelayMs = 500 } = {}) {
+export async function retry(fn, { attempts = 3, initialDelayMs = 500 } = {}) {
   let attempt = 0;
   let delay = initialDelayMs;
   while (attempt < attempts) {
@@ -34,8 +33,8 @@ async function retry(fn, { attempts = 3, initialDelayMs = 500 } = {}) {
   }
 }
 
-// Authenticate for a specific companyId and return token (flexible to pick token field)
-async function getCompanyToken(companyId) {
+// Authenticate and get token for a specific company
+export async function getCompanyToken(companyId) {
   const body = {
     company: companyId,
     email: USERNAME,
@@ -53,11 +52,11 @@ async function getCompanyToken(companyId) {
         Accept: "application/json",
       },
       body: JSON.stringify(body),
-    }), { attempts: 3, initialDelayMs: 700 }
+    })
   );
 
   if (!res.ok) {
-    const text = await res.text().catch(()=>"<no body>");
+    const text = await res.text().catch(() => "<no body>");
     throw new Error(`Auth failed for company ${companyId}: ${res.status} ${res.statusText} - ${text}`);
   }
 
@@ -67,8 +66,8 @@ async function getCompanyToken(companyId) {
   return token;
 }
 
-// Get drivers list for a company using company token
-async function getDriversForCompany(token) {
+// Get drivers for a company
+export async function getDriversForCompany(token) {
   const res = await retry(() =>
     fetch(DRIVERS_URL, {
       method: "GET",
@@ -77,44 +76,40 @@ async function getDriversForCompany(token) {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-    }), { attempts: 3, initialDelayMs: 700 }
+    })
   );
 
   if (!res.ok) {
-    const text = await res.text().catch(()=>"<no body>");
+    const text = await res.text().catch(() => "<no body>");
     throw new Error(`Drivers fetch failed: ${res.status} ${res.statusText} - ${text}`);
   }
 
   const json = await res.json().catch(() => ({}));
-  // Structure may be { data: [...] } or [...]
-  const arr = Array.isArray(json) ? json : (Array.isArray(json.data) ? json.data : []);
-  return arr;
+  return Array.isArray(json) ? json : Array.isArray(json.data) ? json.data : [];
 }
 
-
-// Filter drivers to required fields (only those with updatedAt)
-function filterDrivers(rawDrivers) {
+// Filter drivers
+export function filterDrivers(rawDrivers) {
   return rawDrivers
-    .filter(d => d.updatedAt) // ✅ keep only drivers that have updatedAt
+    .filter(d => d.updatedAt)
     .map(d => ({
       firstName: d.firstName ?? d.firstname ?? d.first_name ?? null,
       lastName:  d.lastName  ?? d.lastname  ?? d.last_name  ?? null,
       _id:       d._id ?? null,
       active:    typeof d.active === "boolean" ? d.active : !!d.active,
-      updatedAt: d.updatedAt
+      updatedAt: d.updatedAt,
     }));
 }
 
-
-async function main({
+// Main function to fetch all companies' drivers
+export async function fetchAllCompaniesDrivers({
   companiesFile = "companies_filtered.json",
   outFile = "companies_with_drivers.json",
-  sequential = true, // if false, you could implement concurrency
+  sequential = true, // currently sequential, can add concurrency later
 } = {}) {
   const raw = await fs.readFile(companiesFile, "utf-8");
   const companies = JSON.parse(raw);
-
-  if (!Array.isArray(companies)) throw new Error("companies_filtered.json must be an array");
+  if (!Array.isArray(companies)) throw new Error("Companies file must be an array");
 
   const result = [];
   let i = 0;
@@ -135,37 +130,18 @@ async function main({
       const driversRaw = await getDriversForCompany(token);
       const drivers = filterDrivers(driversRaw);
 
-      result.push({
-        companyId,
-        name: companyName || null,
-        drivers,
-      });
+      result.push({ companyId, name: companyName || null, drivers });
 
-      // Optionally snapshot each company as you go to avoid losing progress
+      // snapshot each company
       await fs.writeFile(outFile, JSON.stringify(result, null, 2));
     } catch (err) {
       console.error(`Error for company ${companyId}:`, err.message);
-      // push error entry if desired:
-      result.push({
-        companyId,
-        name: companyName || null,
-        drivers: [],
-        _error: err.message,
-      });
-      // continue loop
+      result.push({ companyId, name: companyName || null, drivers: [], _error: err.message });
     }
 
-    // polite delay between companies (adjust or remove)
-    await new Promise(r => setTimeout(r, 300)); // 300ms
+    await new Promise(r => setTimeout(r, 1000));
   }
 
-  // final save
   await fs.writeFile(outFile, JSON.stringify(result, null, 2));
   console.log(`Done. Saved ${result.length} company entries to ${outFile}`);
 }
-
-// Run
-main().catch(err => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
